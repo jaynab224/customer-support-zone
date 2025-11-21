@@ -15,30 +15,34 @@ const CustomerTickets = ({
   complete,
   setComplete,
   removeCard,
-
 }) => {
   const tickets = use(cardData);
 
   return (
-    <div className="bg-[#f5f5f5] text-cyan-950 ">
+    <div className="bg-[#f5f5f5] text-cyan-950">
       <Container>
+   
         <div className="grid grid-cols-3 gap-6">
+          
+          
           <div className="col-span-2">
             <h1 className="text-3xl font-bold pt-9 pb-8">Customer Tickets</h1>
-            <div className="grid grid-cols-2 gap-3">
+           
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {tickets.map((ticket) => (
-                <div className="mb-3 text-black col-span-1 ">
+                <div key={ticket.id} className="mb-3 text-black col-span-1">
                   <CustomerTicketsCard
                     setClicked={setClicked}
                     clicked={clicked}
                     inProgress={inProgress}
                     setInPorgress={setInPorgress}
                     ticket={ticket}
-                  ></CustomerTicketsCard>
+                  />
                 </div>
               ))}
             </div>
           </div>
+
 
           <div className="col-span-1">
             <h1 className="text-2xl font-bold pt-9 pb-3">Task Status</h1>
@@ -51,10 +55,10 @@ const CustomerTickets = ({
               complete={complete}
               setComplete={setComplete}
               removeCard={removeCard}
-            ></Task>
+            />
 
             <h1 className="text-2xl font-bold pt-3 pb-1">Resolved Task</h1>
-            <Resolved complete={complete}></Resolved>
+            <Resolved complete={complete} />
           </div>
         </div>
       </Container>
