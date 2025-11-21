@@ -1,6 +1,5 @@
 **1. What is JSX, and why is it used?**
-**Ans:**
-JSX is **JavaScript XML**.JSX is a way to write HTML code inside **JavaScript**. It helps you build UI easily and makes the code more readable.<br>
+**Ans:** JSX is **JavaScript XML**.JSX is a way to write HTML code inside **JavaScript**. It helps you build UI easily and makes the code more readable.<br>
 **2. What is the difference between State and Props?**  
 **Ans:** **State** is the internal data of a component that can change over time. Props are data passed from a parent component to a child component and cannot be changed by the child.<br>
 **3. What is the useState hook, and how does it work?** 
